@@ -1,0 +1,21 @@
+#target {
+  line-height: 150%;
+  user-select: none;
+}
+
+.block {
+  background-color: #fff2a8;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.tooltip {
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  color: #ffffff;
+  background-color: #000000;
+  opacity: 0.65;
+}
