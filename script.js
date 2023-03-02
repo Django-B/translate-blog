@@ -1,7 +1,10 @@
 $(function(){
   text = $('#target').text()
   tooltip = ".tooltip"
-  $('#target').html(markup(text))
+  // $('.target').html(markup(text))
+  $(".target").each(function(i, elem) {
+    $(this).html(markup($(this).text()))
+  })
   
   // $('.block').hover(
   $(".block").mousemove( display_tooltip ).mouseleave(
@@ -13,7 +16,7 @@ $(function(){
   $(".block").click(
     function() {
       translate = prompt("Введите перевод для: "+$(this).text())
-      if (translate != null) {
+      if (translate != '') {
         $(this).attr("data", translate)
         $(tooltip).html($(this).attr('data'))
       }
@@ -23,7 +26,6 @@ $(function(){
 
 function display_tooltip(cursor) {
   data = $(this).attr('data')
-  console.log(data)
   $(tooltip).show()
   $(tooltip).html(data)
   $(tooltip).css("left", (cursor.pageX+10)+"px").css("top", (cursor.pageY-20)+"px")

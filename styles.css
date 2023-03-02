@@ -3,6 +3,10 @@
   user-select: none;
 }
 
+.target {
+  font-weight: 300;
+}
+
 .block {
   background-color: #fff2a8;
   padding: 2px;
