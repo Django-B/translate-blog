@@ -5,12 +5,14 @@
 
 .target {
   font-weight: 300;
+  line-height: 150%;
 }
 
 .block {
   background-color: #fff2a8;
   padding: 2px;
   border-radius: 5px;
+  border-radius: 10px;
 }
 
 .tooltip {
